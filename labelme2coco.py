@@ -2,9 +2,9 @@ from annotation_utils.labelme.structs import LabelmeAnnotationHandler
 from annotation_utils.coco.structs import COCO_Dataset, COCO_Category_Handler
 
 # Path Variables
-img_dir = '/home/hien/Desktop/ElectricalDrawing_Kume_san/ElectricalDrawing/112_crop_testdata/hien_all_2/image/'
-json_dir = '/home/hien/Desktop/ElectricalDrawing_Kume_san/ElectricalDrawing/112_crop_testdata/hien_all_2/image/'
-categories_conf_path = '/home/hien/labelme_test/hien_all_2/hien_all_2_symbol_categories.json'
+img_dir = ''
+json_dir = ''
+categories_conf_path = ''
 
 # Load Labelme Annotation Handler
 labelme_handler = LabelmeAnnotationHandler.load_from_dir(load_dir=json_dir)
@@ -17,7 +17,7 @@ coco_dataset = COCO_Dataset.from_labelme(
 )
 
 # Save COCO Dataset to a file
-coco_dataset.save_to_path(save_path='/home/hien/Desktop/ElectricalDrawing_Kume_san/ElectricalDrawing/112_crop_testdata/hien_all_2/coco.json', overwrite=True)
+coco_dataset.save_to_path(save_path='', overwrite=True)
 
 # Preview COCO Dataset
 coco_dataset.display_preview(show_details=True)
